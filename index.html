@@ -2,11 +2,9 @@
 <html>
 <head>
   <title>MUSIC HISTORY</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>THE MUSIC OF HISTORY</h1>
-  </header>
 
   <div class="nav_bar">
     <nav>
@@ -16,9 +14,8 @@
     </nav>
   </div>
 
-
-  <aside>
-    <div class="user_select">
+<div class="container">
+    <div class="left">
       <h4>Song Length:</h4>
         <input type="range">
       <h4>Artist:</h4>
@@ -40,17 +37,19 @@
           <option value="Tropical Jinx">Tropical Jinx</option>
         </select>
       <h4>Genre:</h4>
-        <input type="checkbox" name="genre" value="rock">Rock
-        <input type="checkbox" name="genre" value="pop">Pop
-        <input type="checkbox" name="genre" value="blues">Blues
-        <input type="checkbox" name="genre" value="jazz">Jazz
-        <input type="checkbox" name="genre" value="hiphop">Hip Hop
-        <input type="checkbox" name="genre" value="classical">Classical
+          <div class="radio1">
+            <input type="checkbox" name="genre" value="rock">Rock
+            <input type="checkbox" name="genre" value="pop">Pop
+            <input type="checkbox" name="genre" value="blues">Blues
+          </div>
+          <div class="radio2">
+            <input type="checkbox" name="genre" value="jazz">Jazz
+            <input type="checkbox" name="genre" value="hiphop">Hip Hop
+            <input type="checkbox" name="genre" value="classical">Classical
+          </div>
     </div>
-  </aside>
 
-  <section>
-    <div class="now_playing">
+    <div class="right">
       <h3>Twenty-Four Hours</h3>
         <div class="song_info">Joy Division | Unknown Pleasures | Rock</div>
       <h3>Trouble With Boys</h3>
@@ -60,7 +59,7 @@
       <h3>Contact</h3>
         <div class="song_info">As Cities Burn | Come, Now Sleep | Rock</div>
     </div>
-  </section>
 
+</div>
 </body>
 </html>
