@@ -1,5 +1,5 @@
 // var songs = [];
-// var outputDiv = document.getElementById("results");
+var outputDiv = document.getElementById("results");
 
 // songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
 // songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
@@ -27,11 +27,29 @@
 //   }
 
 // outputDiv.innerHTML = `<div> ${newSongs.toString().replace(/,/g, '')}</div>`;
+function makeDom(xhrData){
+  outputDiv.innerHTML = "";
+  for(var i = 0; i < xhrData.songs.length; i++) {
+    currentSong = xhrData.songs[i];
+    var fullSongName = currentSong.name;
+    var artistName = currentSong.artist;
+    var albumName = currentSong.album;
+    var genre = currentSong.genre;
+    outputDiv.innerHTML += `<h4>${fullSongName}</h4><ul><li class="songInfo">${artistName}</li> | <li class="songInfo">${albumName}</li> | <li class="songInfo">${genre}</li>`
 
 
+  }
 
-function getSongInfo(songInfo) {
+}
+
+
+function getSongInfo() {
   var data = JSON.parse(this.responseText);
+  makeDom(data);
+}
+
+function fileFailed() {
+  alert("your stuff messed up");
 }
 
 
@@ -44,4 +62,5 @@ function getSongInfo(songInfo) {
 var myRequest = new XMLHttpRequest();
 myRequest.addEventListener("load", getSongInfo);
 myRequest.addEventListener("error", fileFailed);
+myRequest.open("GET", "songs.json");
 myRequest.send();
