@@ -1,0 +1,23 @@
+{
+  "songs": [{
+    "name": "Prom Song",
+    "artist": "Pile",
+    "album": "Dripping",
+    "genre": "rock"
+  }, {
+    "name": "Rape Me",
+    "artist": "Nirvana",
+    "album": "Live At Reading",
+    "genre": "rock"
+  }, {
+    "name": "Fire Breather",
+    "artist": "Thrice",
+    "album": "Alchemy Index",
+    "genre": "rock"
+  }, {
+    "name": "Lady Blue",
+    "artist": "As Cities Burn",
+    "album": "Hell Or Highwater",
+    "genre": "rock"
+  }]
+}
